@@ -40,23 +40,24 @@ Calls for Convertkit API v3 are relative to the url [http://api.convertkit.com/v
 
 API actions are available as methods on the client object. Currently, the Convertkit client has the following methods:
 
-| Action                  | Method                       |
-|:------------------------|:-----------------------------|
-| Get account information | `#account`                   |
-| List subscribers        | `#subscribers(options = {})` |
-| Fetch a subscriber      | `#subscriber(subscriber_id)` |
-| Update a subscriber     | `#update_subscriber(subscriber_id, options = {})` |
-| List sequences/courses  | `#sequences`                 |
-| Add subscriber to sequence | `#add_subscriber_to_sequence(sequence_id, email, options = {})`|
-| List tags               | `#tags`                      |
-| Add subscriber to tag   | `#add_subscriber_to_tag(tag_id, email, options = {})`|
-| Create a tag            | `#create_tag(tag_name)`      |
-| Create multiple tags    | `#create_tags(tag_names)`|
-| List forms              | `#forms`                     |
-| Add subscriber to form  | `#add_subscriber_to_form(form_id, email, options = {})`|
-| Unsubscribe             | `#unsubscribe(email)`        |
 
-**Note:** We do not have complete API coverage yet. If we are missing an API method that you need to use in your application, please file an issue and/or open a pull request. [See the official API documentation](http://kb.convertkit.com/article/api-documentation-v3/) for a complete API reference.
+| Action                       | Method                                                          |
+|:-----------------------------|:----------------------------------------------------------------|
+| Get account information      | `#account`                                                      |
+| List subscribers             | `#subscribers(options = {})`                                    |
+| Fetch a subscriber           | `#subscriber(subscriber_id)`                                    |
+| List sequences/courses       | `#sequences`                                                    |
+| Add subscriber to sequence   | `#add_subscriber_to_sequence(sequence_id, email, options = {})` |
+| List tags                    | `#tags`                                                         |
+| Add subscriber to tag        | `#add_subscriber_to_tag(tag_id, email, options = {})`           |
+| Remove tag from a subscriber | `#remove_tag_from_subscriber(subscriber_id, tag_id)`            |
+| List forms                   | `#forms`                                                        |
+| Add subscriber to form       | `#add_subscriber_to_form(form_id, email, options = {})`         |
+| Unsubscribe                  | `#unsubscribe(email)`                                           |
+
+**Note:** We do not have complete API coverage yet. If we are missing an API method that you need to use in your application, please file an issue and/or open a pull request. 
+
+[See the official API documentation](http://kb.convertkit.com/article/api-documentation-v3/) for a complete API reference.
 
 ## Use Cases
 
@@ -98,9 +99,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/hookengine/convertkit-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Atomoworks/convertkit-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-1. Fork it ( https://github.com/hookengine/convertkit-ruby/fork )
+1. Fork it ( https://github.com/Atomoworks/convertkit-ruby/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
